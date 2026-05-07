@@ -1,0 +1,56 @@
+What are databases
+
+Relational data model
+SQL: structured query language
+Basic data types in SQL
+Literals
+Arithmetic expressions
+Basic CREATE statement
+Basic SELECT statement
+SELECT FROM statement
+Logic and comparison expressions
+The NULL value
+Special WHERE operators
+Basic INSERT statement
+Basic DELETE statement
+Results ordering
+Types of JOINs
+ER-diagrams
+Basic UPDATE statement
+Updating selected rows
+Inserting selected rows
+Limit and Offset
+Row-oriented databases
+Intro to MySQL
+Alter table
+PRIMARY KEY constraint
+FOREIGN KEY constraint
+Sequences
+Comparison of DELETE and TRUNCATE
+ISNULL and NULLIF functions
+Conditional functions
+Ordering and total order
+Comments in SQL
+Code style
+Aggregate functions
+GROUP BY statement
+Subqueries
+The WITH statement
+Variables in MySQL
+Stored Procedures
+IF statement
+Stored Procedure Parameters
+Views
+Triggers
+SQL injections
+Indexes
+Explain plan
+Consistency constraints
+Introduction to transactions
+Understanding Transactions
+Transaction isolation levels
+String operations
+Set operations
+Date & Time data types
+Composite indexes
+OLTP vs OLAP
