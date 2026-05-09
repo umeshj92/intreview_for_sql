@@ -34,3 +34,9 @@ CREATE TABLE Orders (
     -- This foreign key is the exact translation of "must belong to exactly one customer"
 );
 That’s it. Two tables. This is not your data model — this is your data model expressed using the relational model so the SQL engine can understand and protect it.
+
+
+
+Relational model = the fixed mathematical grammar (tables, keys, rules) that every SQL database must obey.
+Schema = the specific, written contract you create for your own database by using that grammar.
+
