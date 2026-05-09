@@ -2,6 +2,7 @@ Data model?
 
 A data model in an SQL database is the complete, provable contract that defines what every piece of data means, how pieces are related, 
 and which rules the database engine must enforce forever — expressed using the relational model so the engine can guarantee correctness and speed automatically.
+
 define your own data model in plain English (this is the real data model)
 Imagine a tiny online store. Write the rules in your own words (I already wrote them here so you can follow):
 
