@@ -1,0 +1,35 @@
+Data model?
+
+A data model in an SQL database is the complete, provable contract that defines what every piece of data means, how pieces are related, 
+and which rules the database engine must enforce forever — expressed using the relational model so the engine can guarantee correctness and speed automatically.
+define your own data model in plain English (this is the real data model)
+Imagine a tiny online store. Write the rules in your own words (I already wrote them here so you can follow):
+
+A Customer has: a unique ID, a name, an email, and a creation date.
+An Order belongs to exactly one Customer.
+An Order has: a unique ID, the date it was placed, and the total amount.
+No Order can exist without a Customer (you cannot have an orphan order).
+One Customer can have many Orders (but each Order has only one Customer).
+
+This plain-English description = your data model. It lives in your head. It is not SQL yet.
+Part B: Now translate it into the relational model (this is what SQL understands)
+We express the exact same rules using only the relational model’s building blocks: tables, columns, primary keys, foreign keys, and constraints.
+Here is the SQL you can copy-paste and run right now (works in SQLite, MySQL, PostgreSQL — any SQL database):
+SQL-- 1. Customers table (a "relation")
+CREATE TABLE Customers (
+    customer_id   INTEGER PRIMARY KEY,     -- unique identifier
+    name          TEXT NOT NULL,            -- must have a name
+    email         TEXT UNIQUE NOT NULL,     -- must be unique
+    created_at    DATE NOT NULL             -- must have date
+);
+
+-- 2. Orders table (another "relation")
+CREATE TABLE Orders (
+    order_id     INTEGER PRIMARY KEY,       -- unique identifier
+    customer_id  INTEGER NOT NULL,           -- must belong to a customer
+    order_date   DATE NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL,     -- money amount
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+    -- This foreign key is the exact translation of "must belong to exactly one customer"
+);
+That’s it. Two tables. This is not your data model — this is your data model expressed using the relational model so the SQL engine can understand and protect it.
