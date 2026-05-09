@@ -1,0 +1,574 @@
+# SQL Section Content
+
+# SQL Topics and Question Names Only (Without Answers)
+
+1. What is SQL
+2. Difference Between SQL and NoSQL
+3. Types of SQL Commands
+4. DDL Commands
+5. DML Commands
+6. DQL Commands
+7. DCL Commands
+8. TCL Commands
+9. SQL Constraints
+10. NOT NULL Constraint
+11. UNIQUE Constraint
+12. PRIMARY KEY Constraint
+13. FOREIGN KEY Constraint
+14. CHECK Constraint
+15. DEFAULT Constraint
+16. INDEX Constraint
+17. Primary Key
+18. Foreign Key
+19. Difference Between Primary Key and Foreign Key
+20. Difference Between Primary Key and Unique Key
+21. Composite Key
+22. Normalization
+23. 1NF
+24. 2NF
+25. 3NF
+26. BCNF
+27. Denormalization
+28. SQL Joins
+29. INNER JOIN
+30. LEFT JOIN
+31. RIGHT JOIN
+32. FULL OUTER JOIN
+33. SELF JOIN
+34. CROSS JOIN
+35. Difference Between INNER JOIN and OUTER JOIN
+36. Aggregate Functions
+37. COUNT()
+38. SUM()
+39. AVG()
+40. MIN()
+41. MAX()
+42. SQL Clauses
+43. WHERE Clause
+44. GROUP BY Clause
+45. HAVING Clause
+46. ORDER BY Clause
+47. DISTINCT Keyword
+48. LIKE Operator
+49. IN Operator
+50. BETWEEN Operator
+51. EXISTS Operator
+52. ANY Operator
+53. ALL Operator
+54. Views
+55. Types of Views
+56. Advantages of Views
+57. Indexes
+58. Clustered Index
+59. Non-Clustered Index
+60. Difference Between Clustered and Non-Clustered Index
+61. Stored Procedures
+62. Advantages of Stored Procedures
+63. Functions in SQL
+64. Scalar Functions
+65. Table-Valued Functions
+66. User Defined Functions
+67. Difference Between Function and Stored Procedure
+68. Triggers
+69. Types of Triggers
+70. Event-Based Triggers
+71. Transactions
+72. ACID Properties
+73. Atomicity
+74. Consistency
+75. Isolation
+76. Durability
+77. COMMIT
+78. ROLLBACK
+79. SAVEPOINT
+80. Subqueries
+81. Types of Subqueries
+82. Single Row Subquery
+83. Multiple Row Subquery
+84. Multiple Column Subquery
+85. Correlated Subquery
+86. Scalar Subquery
+87. UNION
+88. UNION ALL
+89. Difference Between UNION and UNION ALL
+90. DELETE Command
+91. TRUNCATE Command
+92. DROP Command
+93. Difference Between DELETE, TRUNCATE, and DROP
+94. SQL String Functions
+95. LEN()
+96. UPPER()
+97. LOWER()
+98. SUBSTRING()
+99. SQL Date Functions
+100. GETDATE()
+101. DATEADD()
+102. DATEDIFF()
+103. Cursors
+104. Steps in Cursor Handling
+105. Common Table Expression (CTE)
+106. Advantages of CTE
+107. Window Functions
+108. ROW_NUMBER()
+109. RANK()
+110. DENSE_RANK()
+111. LEAD()
+112. LAG()
+113. SQL Interview Topics
+114. SQL Practice Queries
+115. Employee Table Queries
+116. Second Highest Salary Query
+117. nth Highest Salary Query
+118. Duplicate Records Query
+119. Joins Practice Queries
+120. GROUP BY Practice Queries
+121. Date-Based Queries
+122. Window Function Practice Queries
+123. Query Optimization
+124. Stored Procedure Optimization
+125. SQL Performance Tuning
+126. Database Design Concepts
+127. Referential Integrity
+128. Data Integrity
+129. Pattern Matching Queries
+130. Cartesian Product
+131. Hierarchical Data Using Self Join
+132. Transaction Management
+133. Built-in Functions
+134. Database Security Basics
+135. Reusable SQL Logic
+136. SQL Best Practices
+
+## What is SQL
+
+SQL stands for Structured Query Language. It's a standard language used for managing and manipulating relational databases.
+
+* Query data: Retrieve specific information from databases using commands like SELECT.
+* Insert data: Add new records to tables with INSERT.
+* Update data: Modify existing records using UPDATE.
+* Delete data: Remove records with DELETE.
+* Create and modify structures: Define or change tables and relationships with CREATE, ALTER, and DROP.
+
+---
+
+## Difference b/w SQL and NoSQL
+
+### SQL Databases
+
+1. Data Model:
+
+* Structured Data: Use a relational model where data is stored in tables with rows and columns.
+* Schema: Typically have a predefined schema that defines the structure of the data and relationships between tables.
+
+2. Query Language:
+
+* SQL (Structured Query Language): Used for querying and managing data. It supports complex queries, joins, and transactions.
+
+### NoSQL Databases
+
+1. Data Model:
+
+* Flexible Schema: Often use various data models, including document-based, key-value pairs, column-family, or graph-based.
+* Schema-less: Can handle unstructured or semi-structured data, allowing more flexibility.
+
+2. Query Language:
+
+* Varies by Database: Each NoSQL database has its query language or API for interacting with data. Examples include MongoDB's query language, Couchbase's N1QL, or Cassandra's CQL.
+
+3. Scalability:
+
+* SQL: Vertically scalable.
+* NoSQL: Horizontally scalable.
+
+4. Transactions:
+
+* SQL: Strong ACID compliance.
+* NoSQL: BASE model, eventual consistency.
+
+5. Examples:
+
+* SQL: MySQL, PostgreSQL, SQL Server, Oracle.
+* NoSQL: MongoDB, Cassandra, Redis, CouchDB.
+
+---
+
+## SQL Commands
+
+### DDL (Data Definition Language)
+
+* CREATE
+* ALTER
+* DROP
+* TRUNCATE
+
+### DML (Data Manipulation Language)
+
+* INSERT
+* UPDATE
+* DELETE
+
+### DQL (Data Query Language)
+
+* SELECT
+
+### DCL (Data Control Language)
+
+* GRANT
+* REVOKE
+
+### TCL (Transaction Control Language)
+
+* COMMIT
+* ROLLBACK
+* SAVEPOINT
+
+---
+
+## SQL Constraints
+
+* NOT NULL
+* UNIQUE
+* PRIMARY KEY
+* FOREIGN KEY
+* CHECK
+* DEFAULT
+* INDEX
+
+---
+
+## Primary Key
+
+* A primary key uniquely identifies each record in a table.
+* It cannot contain NULL values.
+* A table can have only one primary key.
+
+---
+
+## Foreign Key
+
+* A foreign key is used to link two tables together.
+* It is a field in one table that refers to the PRIMARY KEY in another table.
+
+---
+
+## Normalization
+
+### Types:
+
+* 1NF
+* 2NF
+* 3NF
+* BCNF
+
+### Purpose:
+
+* Reduce redundancy.
+* Improve data integrity.
+
+---
+
+## Joins
+
+### INNER JOIN
+
+Returns matching rows from both tables.
+
+### LEFT JOIN
+
+Returns all rows from left table and matched rows from right table.
+
+### RIGHT JOIN
+
+Returns all rows from right table and matched rows from left table.
+
+### FULL JOIN
+
+Returns all rows when there is a match in one of the tables.
+
+### SELF JOIN
+
+A table joined with itself.
+
+### CROSS JOIN
+
+Returns Cartesian product of both tables.
+
+---
+
+## Aggregate Functions
+
+* COUNT()
+* SUM()
+* AVG()
+* MIN()
+* MAX()
+
+---
+
+## Clauses
+
+* WHERE
+* GROUP BY
+* HAVING
+* ORDER BY
+* DISTINCT
+
+---
+
+## Views
+
+* A view is a virtual table based on SQL query result.
+* Used for security and simplification.
+
+---
+
+## Indexes
+
+* Improve query performance.
+* Speed up data retrieval.
+
+---
+
+## Stored Procedures
+
+* Precompiled collection of SQL statements.
+* Reusable and improves performance.
+
+---
+
+## Triggers
+
+* Automatically executed when events occur on a table.
+
+---
+
+## Transactions
+
+### ACID Properties
+
+* Atomicity
+* Consistency
+* Isolation
+* Durability
+
+---
+
+## SQL Functions
+
+### String Functions
+
+* LEN()
+* UPPER()
+* LOWER()
+* SUBSTRING()
+
+### Date Functions
+
+* GETDATE()
+* DATEADD()
+* DATEDIFF()
+
+---
+
+## Subqueries
+
+* Query inside another query.
+* Can be used in SELECT, INSERT, UPDATE, DELETE.
+
+---
+
+## UNION vs UNION ALL
+
+### UNION
+
+* Removes duplicates.
+
+### UNION ALL
+
+* Includes duplicates.
+
+---
+
+## DELETE vs TRUNCATE vs DROP
+
+### DELETE
+
+* Removes rows.
+* Can rollback.
+
+### TRUNCATE
+
+* Removes all rows quickly.
+* Cannot rollback in some DBs.
+
+### DROP
+
+* Removes table structure completely.
+
+---
+
+## Clustered and Non-Clustered Index
+
+### Clustered Index
+
+* Sorts and stores data rows physically.
+
+### Non-Clustered Index
+
+* Separate structure pointing to data.
+
+---
+
+## SQL Interview Topics
+
+* Joins
+* Normalization
+* Indexes
+* Stored Procedures
+* Triggers
+* Transactions
+* ACID Properties
+* Constraints
+* Subqueries
+* Views
+* Aggregate Functions
+* CTE
+* Window Functions
+
+---
+
+## Window Functions
+
+* ROW_NUMBER()
+* RANK()
+* DENSE_RANK()
+* LEAD()
+* LAG()
+
+---
+
+## Common Table Expression (CTE)
+
+* Temporary result set.
+* Improves readability.
+
+---
+
+## Practice Topics
+
+* Employee table queries
+* Second highest salary
+* Duplicate records
+* nth highest salary
+* Joins practice
+* Group by queries
+* Date queries
+* Window function practice
+
+---
+
+## Additional Topics Found in the SQL Section
+
+### LIKE Operator
+
+* Used for pattern matching.
+* `%` represents zero or more characters.
+* `_` represents a single character.
+
+### Detailed Subquery Types
+
+* Single-row subquery
+* Multiple-row subquery
+* Multiple-column subquery
+* Correlated subquery
+* Scalar subquery
+
+### Function vs Stored Procedure
+
+#### Function
+
+* Returns single value or table.
+* Cannot modify database state.
+* Can be used in SELECT statements.
+
+#### Stored Procedure
+
+* Can perform multiple operations.
+* Can modify database state.
+* Supports transactions and exception handling.
+
+### Cursors
+
+* Used for row-by-row processing.
+* Steps:
+
+  * Declare
+  * Open
+  * Fetch
+  * Process
+  * Close
+  * Deallocate
+
+### Event-Based Triggers
+
+* Automatically execute on database events.
+* Useful for auditing and automation.
+
+### Additional Constraint Types
+
+* Composite Key
+* Unique Key
+* Index Constraint
+
+### Transactions in SQL
+
+* Ensure consistency and integrity.
+* Uses BEGIN TRANSACTION, COMMIT, ROLLBACK.
+
+### SQL Function Categories
+
+* Built-in Functions
+* User-Defined Functions
+* Table-Valued Functions
+* Scalar Functions
+
+### Clustered vs Non-Clustered Index Table Comparison
+
+* Data storage
+* Performance
+* Space usage
+* Use cases
+
+### Primary Key vs Unique Key
+
+#### Primary Key
+
+* Unique and NOT NULL.
+
+#### Unique Key
+
+* Unique but allows one NULL.
+
+### Stored Procedure Optimization
+
+* Use proper indexes.
+* Avoid SELECT *.
+* Use parameterized queries.
+* Optimize joins.
+
+### Self Join and Cross Join
+
+#### Self Join
+
+* Joins a table with itself.
+* Useful for hierarchical data.
+
+#### Cross Join
+
+* Produces Cartesian product.
+
+---
+
+## Notes
+
+The SQL sheet also contains detailed explanations, interview-style theory answers, comparisons, examples, optimization concepts, cursor handling, trigger concepts, and practical database design explanations.
