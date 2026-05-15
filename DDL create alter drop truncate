@@ -1,0 +1,53 @@
+SQL syntax is nothing more than a precise, machine-readable declaration that must be parsed into an internal tree the database engine can execute.
+The engine does not read English. It reads a strict sequence:
+Command verb → Target object → Properties of that object.
+Every DDL command follows this exact three-part skeleton.
+The punctuation (parentheses, commas, semicolons) exists only to mark boundaries so the parser can split the declaration cleanly.
+No magic. No poetry. Just a contract written in a language the machine can compile into actions on the system catalog.
+That is the entire, provable foundation. Nothing else remains.
+Step 3: Rebuild the Fundamental Syntax from Only What Remains
+We now rebuild the syntax for each command using only the three-part skeleton above. These are the minimal forms that every relational engine must understand.
+1. CREATE → “Declare a new contract”
+Fundamental syntax skeleton:
+CREATE TABLE table_name ( column_definitions ) ;
+
+Verb = CREATE TABLE
+Target object = table_name
+Properties = everything inside the parentheses (each column’s name + type + constraints)
+
+This is the only required pattern. Everything else (constraints, indexes, etc.) is just extra detail inside the properties block.
+2. ALTER → “Change an existing contract”
+Fundamental syntax skeleton:
+ALTER TABLE table_name action ;
+
+Verb = ALTER TABLE
+Target object = table_name
+Properties = action (the single thing you want to change)
+
+The action can be ADD column, DROP column, MODIFY column, etc. — but the engine only cares that you name the table and then say exactly one change.
+3. DROP → “Erase the entire contract”
+Fundamental syntax skeleton:
+DROP TABLE table_name ;
+
+Verb = DROP TABLE
+Target object = table_name
+Properties = none (nothing left to declare)
+
+That’s it. The engine needs only the name; everything else is destroyed.
+4. TRUNCATE → “Reset the contract to empty”
+Fundamental syntax skeleton:
+TRUNCATE TABLE table_name ;
+
+Verb = TRUNCATE TABLE
+Target object = table_name
+Properties = none
+
+Again, no extra clauses needed in the minimal form. The engine already knows what “reset to empty” means for this table’s contract.
+The Universal Three-Part Pattern (What Remains After Stripping Everything Else)
+Every DDL command reduces to exactly this provable template:
+VERB OBJECT_NAME ( optional_properties ) ;
+
+VERB is always one of: CREATE TABLE, ALTER TABLE, DROP TABLE, TRUNCATE TABLE
+OBJECT_NAME is always the table you are talking about
+( optional_properties ) is present only when you are defining or changing something (CREATE and ALTER)
+The semicolon ; is the universal “I am finished — execute now” signa
