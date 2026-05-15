@@ -15,6 +15,9 @@ Verb = CREATE TABLE
 Target object = table_name
 Properties = everything inside the parentheses (each column’s name + type + constraints)
 
+
+CREATE TABLE table_name ( column_definitions ); and parses each column_name data_type [constraint_list].
+
 This is the only required pattern. Everything else (constraints, indexes, etc.) is just extra detail inside the properties block.
 2. ALTER → “Change an existing contract”
 Fundamental syntax skeleton:
