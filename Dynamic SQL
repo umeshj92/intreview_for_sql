@@ -1,7 +1,12 @@
 → Dynamic SQL is simply the act of creating that string at runtime instead of writing it once in advance.
 
+Treating SQL as data (a string) that your program can build at runtime, then sending that string to the database engine for execution.
 
 Declare @sql = 'sleect * from employess where dept=''hr''';
 exec @sql ;
 this is just excuting the string means database only excute sql string ( it dont care where it came or how it be means static or dynamic)
+
+In SQL Server, single quote ' = string delimiter.
+To include a single quote as data inside the string, write it twice ''.
+
 
