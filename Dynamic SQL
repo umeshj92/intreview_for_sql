@@ -1,3 +1,7 @@
 → Dynamic SQL is simply the act of creating that string at runtime instead of writing it once in advance.
 
 
+Declare @sql = 'sleect * from employess where dept=''hr''';
+exec @sql ;
+this is just excuting the string means database only excute sql string ( it dont care where it came or how it be means static or dynamic)
+
