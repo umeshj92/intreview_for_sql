@@ -1,0 +1,4 @@
+A User-Defined Function is:
+A piece of logic that you create and save in the database.
+You give it a name.
+Later, you can use it in your queries by calling that name.
